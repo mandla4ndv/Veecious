@@ -40,13 +40,13 @@
         <div class="nav-container">
             <div class="logo-area">
                 <div class="logo-placeholder">
-                    <div class="logo-icon">
-                        <img src="VeeLogo.jpeg" alt="Veecious Security Logo">
+                    <div  class="logo-icon">
+                 <img src="VeeLogo.jpeg" alt="Veecious Security Logo" >
                     </div>
-                    <div class="logo-text">
+                   <a href="#home"><div class="logo-text">
                         <span class="logo-main">Veecious Security</span>
                         <span class="logo-sub">Solutions (PTY) Ltd</span>
-                    </div>
+                    </div></a>
                 </div>
             </div>
             
@@ -729,10 +729,10 @@
                             <div class="logo-icon">
                                 <img src="VeeLogo.jpeg" alt="Veecious logo"/>
                             </div>
-                            <div class="logo-text">
+                           <a href="#home"> <div class="logo-text">
                                 <span class="logo-main">Veecious Security</span>
                                 <span class="logo-sub">Solutions (PTY) Ltd</span>
-                            </div>
+                            </div></a>
                         </div>
                         <p class="footer-tagline">Enterprise-Grade Protection Services</p>
                     </div>
@@ -1422,157 +1422,334 @@
             background: #333333;
         }
         
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .logo-area {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo-placeholder {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        
-        /* Ultra-compact logo for navbar */
-        .logo-icon {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, #222222, #444444);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.8rem;
-            color: #ffffff;
-            border: px solid #555555;
-            overflow: hidden;
-        }
-        
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 2px;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 2.1;
-        }
-        
-        .logo-main {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 0.75rem;
-            color: #ffffff;
-        }
-        
-        .logo-sub {
-            font-size: 0.5rem;
-            color: #aaaaaa;
-            letter-spacing: 0.3px;
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0.5rem 0;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: #aaaaaa;
-            position: relative;
-        }
-        
-        .nav-number {
-            font-size: 0.7rem;
-            color: #666666;
-            margin-bottom: 0.25rem;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-text {
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link.active,
-        .nav-link:hover {
-            color: #ffffff;
-        }
-        
-        .nav-link.active .nav-number,
-        .nav-link:hover .nav-number {
-            color: #ffffff;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #ffffff, #888888);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link.active::after,
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .nav-cta {
-            margin-left: 2rem;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            cursor: pointer;
-        }
-        
-        .menu-icon {
-            width: 24px;
-            height: 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .menu-icon span {
-            display: block;
-            height: 2px;
-            width: 100%;
-            background: #ffffff;
-            transition: all 0.3s ease;
-        }
+    /* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+    padding: 1.2rem 0; /* Slightly smaller padding on desktop */
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Smaller gap on desktop */
+}
+
+/* Logo container - SMALLER ON DESKTOP */
+.logo-icon {
+    width: 70px; /* SMALLER: Logo width for desktop - adjust this value */
+    height: 70px; /* SMALLER: Logo height for desktop - adjust this value */
+    background: linear-gradient(135deg, #222222, #444444);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #555555;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 3px; /* Smaller padding on desktop */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* Main logo text - SMALLER ON DESKTOP */
+.logo-main {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem; /* SMALLER: Main text size for desktop - adjust this value */
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+/* Subtitle text - SMALLER ON DESKTOP */
+.logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem; /* SMALLER: Subtitle size for desktop - adjust this value */
+    color: #cccccc;
+    letter-spacing: 0.3px;
+    margin-top: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #aaaaaa;
+    position: relative;
+}
+
+.nav-number {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.nav-text {
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link.active .nav-number,
+.nav-link:hover .nav-number {
+    color: #ffffff;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, #888888);
+    transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    margin-left: 3rem;
+}
+
+.nav-cta .btn-outline {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments - BIGGER ON MOBILE */
+@media (max-width: 1200px) {
+    .nav-menu {
+        gap: 2rem;
+    }
+}
+
+/* BIGGER ON TABLET */
+@media (max-width: 992px) {
+    .logo-icon {
+        width: 85px; /* BIGGER: Increased for tablet */
+        height: 85px; /* BIGGER: Increased for tablet */
+    }
+    
+    .logo-main {
+        font-size: 2.8rem; /* BIGGER: Increased for tablet */
+    }
+    
+    .logo-sub {
+        font-size: 0.85rem; /* BIGGER: Increased for tablet */
+    }
+    
+    .logo-placeholder {
+        gap: 1rem; /* BIGGER: Increased gap for tablet */
+    }
+    
+    .navbar {
+        padding: 1.5rem 0; /* BIGGER: More padding for tablet */
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 140px; /* BIGGER: Adjusted for taller navbar */
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 140px);
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        gap: 0;
+        transition: left 0.4s ease;
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 1.5rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 1.1rem;
+    }
+    
+    .nav-number {
+        font-size: 0.9rem;
+    }
+    
+    .nav-cta {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .mobile-menu-btn.active .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .mobile-menu-btn.active .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+/* EVEN BIGGER ON MOBILE */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 200px; /* BIGGER: Increased for mobile */
+        height: 200px; /* BIGGER: Increased for mobile */
+    }
+    
+    .logo-main {
+        font-size: 2rem; /* BIGGER: Increased for mobile */
+    }
+    
+    .logo-sub {
+        font-size: 0.9rem; /* BIGGER: Increased for mobile */
+    }
+    
+    .logo-placeholder {
+        gap: 4.2rem; /* BIGGER: Increased gap for mobile */
+    }
+    
+    .navbar {
+        padding: 1.2rem 0; /* Adjusted padding for mobile */
+    }
+    
+    .nav-menu {
+        top: 135px; /* Adjusted for navbar height */
+    }
+}
+
+/* BIGGEST ON SMALL MOBILE */
+@media (max-width: 576px) {
+    .logo-icon {
+        width: 200px; /* BIGGEST: Maximum size for very small screens */
+        height: 200px; /* BIGGEST: Maximum size for very small screens */
+    }
+    
+    .logo-main {
+        font-size: 2.2rem; /* BIGGEST: Maximum size for very small screens */
+    }
+    
+    .logo-sub {
+        font-size: 0.95rem; /* BIGGEST: Maximum size for very small screens */
+    }
+    
+    .logo-placeholder {
+        gap: 1.5rem; /* BIGGEST: Maximum gap for very small screens */
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .nav-menu {
+        top: 120px;
+    }
+    
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .logo-icon {
+        width: 200px; /* Slightly smaller for very narrow screens */
+        height: 200px;
+    }
+    
+    .logo-main {
+        font-size: 3.8rem; /* Slightly smaller for very narrow screens */
+    }
+    
+    .logo-sub {
+        font-size: 3.8rem; /* Slightly smaller for very narrow screens */
+    }
+    
+    .logo-placeholder {
+        gap: 1rem;
+    }
+}
         
         /* Hero Section */
         .hero-section {
@@ -2680,8 +2857,8 @@
         }
         
         .footer-logo .logo-icon {
-            width: 32px;
-            height: 32px;
+            width: 52px;
+            height: 52px;
             font-size: 0.9rem;
         }
         
@@ -2955,22 +3132,22 @@
             
             /* Mobile logo adjustments */
             .logo-icon {
-                width: 20px;
-                height: 20px;
+                width: 56px;
+                height: 56px;
                 font-size: 0.7rem;
             }
             
             .logo-main {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
             }
             
             .logo-sub {
-                font-size: 0.45rem;
+                font-size: 0.70rem;
             }
             
             .footer-logo .logo-icon {
-                width: 28px;
-                height: 28px;
+                width: 56px;
+                height: 56px;
             }
             
             .footer-logo .logo-main {
